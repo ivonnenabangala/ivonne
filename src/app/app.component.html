@@ -84,49 +84,22 @@
       I have skills in developing applications using the listed programming languages and technologies.</p>
   </div>
 </section>
-<section>
-  <div class="example-label">Extended Fab</div>
-  <div class="example-button-row">
-    <div class="example-flex-container">
-      <div class="example-button-container">
-        <button mat-fab extended>
-          <mat-icon>favorite</mat-icon>
-          Basic
-        </button>
-      </div>
-      <div class="example-button-container">
-        <button mat-fab extended disabled>
-          <mat-icon>favorite</mat-icon>
-          Disabled
-        </button>
-      </div>
-      <div class="example-button-container">
-        <a mat-fab extended routerLink=".">
-          <mat-icon>favorite</mat-icon>
-          Link
-        </a>
-      </div>
-    </div>
-  </div>
-</section>
 <div class="container body">
 <section>
-    <h1>Languages & Frameworks</h1>
+    <h1>Languages, Frameworks & Databases</h1>
+    
+
+      
     <div class="pill-group">
-      @for (item of [
-        { title: 'Explore the Docs', link: 'https://angular.dev' },
-        { title: 'Learn with Tutorials', link: 'https://angular.dev/tutorials' },
-        { title: 'CLI Docs', link: 'https://angular.dev/tools/cli' },
-        { title: 'Angular Language Service', link: 'https://angular.dev/tools/language-service' },
-        { title: 'Angular DevTools', link: 'https://angular.dev/tools/devtools' },
-      ]; track item.title) {
+      @for (language of languages; track language.name) {
+        <div class="row">
+          <div class="col-lg">
         <a
           class="pill"
-          [href]="item.link"
           target="_blank"
           rel="noopener"
         >
-          <span>{{ item.title }}</span>
+          <span>{{ language.name }}</span>
           <svg
             xmlns="http://www.w3.org/2000/svg"
             height="14"
@@ -139,26 +112,22 @@
             />
           </svg>
         </a>
+      </div>
+    </div>
       }
     </div>
+  
   </section>
   <section>
     <h1>Tools & Technologies</h1>
     <div class="pill-group">
-      @for (item of [
-        { title: 'Explore the Docs', link: 'https://angular.dev' },
-        { title: 'Learn with Tutorials', link: 'https://angular.dev/tutorials' },
-        { title: 'CLI Docs', link: 'https://angular.dev/tools/cli' },
-        { title: 'Angular Language Service', link: 'https://angular.dev/tools/language-service' },
-        { title: 'Angular DevTools', link: 'https://angular.dev/tools/devtools' },
-      ]; track item.title) {
+      @for (tool of tools; track tool.name) {
         <a
           class="pill"
-          [href]="item.link"
           target="_blank"
           rel="noopener"
         >
-          <span>{{ item.title }}</span>
+          <span>{{ tool.name }}</span>
           <svg
             xmlns="http://www.w3.org/2000/svg"
             height="14"
@@ -178,4 +147,4 @@
     <h1>Projects</h1>
   </section>
   </div>
-<!-- <router-outlet /> -->
+<router-outlet />

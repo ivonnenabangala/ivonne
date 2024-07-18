@@ -37,7 +37,7 @@
     box-sizing: border-box;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
-  }
+}
 
   h1 {
     font-size: 3.125rem;
@@ -70,7 +70,7 @@
 
   main {
     width: 100%;
-    min-height: 100%;
+    min-height: 70vh;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -102,8 +102,8 @@
 
   .pill-group {
     display: flex;
-    flex-direction: column;
-    align-items: start;
+    /* flex-direction: column; */
+    /* align-items: start; */
     flex-wrap: wrap;
     gap: 1.25rem;
   }
@@ -111,7 +111,9 @@
   .pill {
     display: flex;
     align-items: center;
-    --pill-accent: var(--bright-blue);
+    /* --pill-accent: var(--bright-blue); */
+    --pill-accent: var(--french-violet);
+
     background: color-mix(in srgb, var(--pill-accent) 5%, transparent);
     color: var(--pill-accent);
     padding-inline: 0.75rem;
@@ -120,19 +122,21 @@
     border: 0;
     transition: background 0.3s ease;
     font-family: var(--inter-font);
-    font-size: 0.875rem;
+    font-size: 1.5rem;
     font-style: normal;
     font-weight: 500;
     line-height: 1.4rem;
     letter-spacing: -0.00875rem;
     text-decoration: none;
+    box-shadow: 0 4px 8px 0 rgb(255,0,0,0.2);
+    line-height: 1.8;
   }
 
   .pill:hover {
     background: color-mix(in srgb, var(--pill-accent) 15%, transparent);
   }
 
-  .pill-group .pill:nth-child(6n + 1) {
+  /* .pill-group .pill:nth-child(6n + 1) {
     --pill-accent: var(--bright-blue);
   }
   .pill-group .pill:nth-child(6n + 2) {
@@ -142,7 +146,7 @@
   .pill-group .pill:nth-child(6n + 4),
   .pill-group .pill:nth-child(6n + 5) {
     --pill-accent: var(--hot-red);
-  }
+  } */
 
   .pill-group svg {
     margin-inline-start: 0.25rem;
@@ -181,4 +185,15 @@
     max-height: 300px;
     max-width: auto;
     border-radius: 22%;
+  }
+  .example-flex-container {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+  }
+  
+  .example-button-container {
+    display: flex;
+    justify-content: center;
+    width: 120px;
   }
