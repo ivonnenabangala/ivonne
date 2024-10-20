@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
 import { RouterOutlet } from '@angular/router';
+import { CommonModule } from '@angular/common';
 import { MatIconRegistry } from '@angular/material/icon';
 import { DomSanitizer } from '@angular/platform-browser';
 import { MatIconModule } from '@angular/material/icon';
@@ -10,6 +11,7 @@ import { MaterialImports } from './/material.component'
   standalone: true,
   imports: [
     RouterOutlet,
+    CommonModule,
     MatIconModule,
     MaterialImports
   ],
@@ -18,7 +20,7 @@ import { MaterialImports } from './/material.component'
 })
 export class AppComponent {
   title = 'ivonne';
-  languages = [
+  languages: { name: string, icon:string } []= [
     {name: 'JavaScript', icon: 'javascript'},
     {name: 'TypeScript', icon: 'typescript'},
     {name: 'Angular', icon: 'angular'},
@@ -31,13 +33,15 @@ export class AppComponent {
     {name: 'Flutter', icon: 'flutter'},
     {name: 'SQLite', icon: 'sqlite'},
     {name: 'MySql', icon: 'mysql'},
+    {name: 'PostgreSQL', icon: 'postgresql'},
   ]
-  tools = [
+  tools: { name: string, icon:string } [] = [
     {name: 'Github', icon: 'github'},
     {name: 'Gitlab', icon: 'gitlab'},
     {name: 'Docker', icon: 'docker'},
+    {name: 'Google Cloud Platform', icon: 'gcp'},
     {name: 'BootStrap', icon: 'bootstrap'},
-    {name: 'Material Design', icon: 'none'},
+    {name: 'Material Design', icon: 'material-ui'},
   ]
   constructor(
     private matIconRegistry: MatIconRegistry,
@@ -46,16 +50,16 @@ export class AppComponent {
     this.registerIcons();
   }
   registerIcons(): void {
-    this.languages.map(language => {
+    this.languages.map(item => {
       this.matIconRegistry.addSvgIcon(
-        language.icon,
-        this.domSanitzer.bypassSecurityTrustResourceUrl(`assets/icons/${language.icon}.svg`)
+        item.icon,
+        this.domSanitzer.bypassSecurityTrustResourceUrl(`/assets/icons/${item.icon}.svg`)
       )
     });
-    this.tools.map(tool => {
+    this.tools.map(item => {
       this.matIconRegistry.addSvgIcon(
-        tool.icon,
-        this.domSanitzer.bypassSecurityTrustResourceUrl(`assets/icons/${tool.icon}.svg`)
+        item.icon,
+        this.domSanitzer.bypassSecurityTrustResourceUrl(`assets/icons/${item.icon}.svg`)
       )
     });
   }

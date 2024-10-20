@@ -13,7 +13,7 @@
       </div>
       <div class="social-links">
         <a
-          href="https://github.com/angular/angular"
+          href="https://github.com/ivonnenabangala"
           aria-label="Github"
           target="_blank"
           rel="noopener"
@@ -22,7 +22,6 @@
             width="25"
             height="24"
             viewBox="0 0 25 24"
-            fill="none"
             xmlns="http://www.w3.org/2000/svg"
             alt="Github"
           >
@@ -32,7 +31,7 @@
           </svg>
         </a>
         <a
-          href="https://twitter.com/angular"
+          href="https://twitter.com/I_nabangala"
           aria-label="Twitter"
           target="_blank"
           rel="noopener"
@@ -51,7 +50,7 @@
           </svg>
         </a>
         <a
-          href="https://www.youtube.com/channel/UCbn1OgGei-DV7aSRo_HaAiw"
+          href="https://https://www.linkedin.com/in/ivonne-nabangala/"
           aria-label="Youtube"
           target="_blank"
           rel="noopener"
@@ -75,9 +74,10 @@
     </div>
   </div>
 </main>
-<section>
+
+<section class="intro">
   <div class="container">
-    <p>Hi, I'm a web and mobile app developer based in Nairobi, Kenya.</p>
+    <p>Software developer based in Nairobi, Kenya.</p>
     <p>
       I'm passionate about building scallable, efficient, reliable and user friendly applications 
       and in addition to that, I also embrace learning.
@@ -87,33 +87,16 @@
 <div class="container body">
 <section>
     <h1>Languages, Frameworks & Databases</h1>
-    
-
-      
     <div class="pill-group">
-      @for (language of languages; track language.name) {
+      @for (item of languages; track item.name) {
         <div class="row">
           <div class="col-lg">
-        <a
-          class="pill"
-          target="_blank"
-          rel="noopener"
-        >
-          <span>{{ language.name }}</span>
-          <svg
-            xmlns="http://www.w3.org/2000/svg"
-            height="14"
-            viewBox="0 -960 960 960"
-            width="14"
-            fill="currentColor"
-          >
-            <path
-              d="M200-120q-33 0-56.5-23.5T120-200v-560q0-33 23.5-56.5T200-840h280v80H200v560h560v-280h80v280q0 33-23.5 56.5T760-120H200Zm188-212-56-56 372-372H560v-80h280v280h-80v-144L388-332Z"
-            />
-          </svg>
-        </a>
-      </div>
-    </div>
+            <button mat-raised-button style="height: 60px;">
+              <img matChipAvatar [src]="'/assets/icons/' + item.icon + '.svg'" alt="icon" style="width: 40px; height:auto;"/>
+                {{item.name}}
+            </button>
+          </div>
+        </div>
       }
     </div>
   
@@ -121,30 +104,64 @@
   <section>
     <h1>Tools & Technologies</h1>
     <div class="pill-group">
-      @for (tool of tools; track tool.name) {
-        <a
-          class="pill"
-          target="_blank"
-          rel="noopener"
-        >
-          <span>{{ tool.name }}</span>
-          <svg
-            xmlns="http://www.w3.org/2000/svg"
-            height="14"
-            viewBox="0 -960 960 960"
-            width="14"
-            fill="currentColor"
-          >
-            <path
-              d="M200-120q-33 0-56.5-23.5T120-200v-560q0-33 23.5-56.5T200-840h280v80H200v560h560v-280h80v280q0 33-23.5 56.5T760-120H200Zm188-212-56-56 372-372H560v-80h280v280h-80v-144L388-332Z"
-            />
-          </svg>
-        </a>
+      @for (item of tools; track item.name) {
+        <div class="row">
+          <div class="col-lg">
+            <button mat-raised-button style="height: 60px;">
+              <img matChipAvatar [src]="'/assets/icons/' + item.icon + '.svg'" alt="icon" style="width: 40px; height:auto;"/>
+                {{item.name}}
+            </button>
+          </div>
+        </div>
       }
     </div>
   </section>
   <section>
-    <h1>Projects</h1>
+    <div class="projects-wrapper">
+      <h1 style="text-align: center;">Projects</h1>
+      <div class="container" style="text-align: center;">
+        <div class="row">
+          <div class="col-sm-4">
+            <div>
+              <a href="https://stmonicasgirls.com" target="_blank" style="text-decoration: none;">
+                <mat-card>
+                  <img src="assets/images/smghs.png" alt="">
+                  <mat-card-content>
+                    <p>School website</p>
+                  </mat-card-content>
+                </mat-card>
+              </a>
+            </div>
+          </div>
+          <div class="col-sm-4">
+            <div>
+              <a href="https://viutravel.com" target="_blank" style="text-decoration: none;">
+                <mat-card>
+                  <img src="assets/images/viutravel.png" alt="">
+                  <mat-card-content>
+                    <p>Viutravel web app</p>
+                  </mat-card-content>
+                </mat-card>
+              </a>
+            </div>
+          </div>
+          <div class="col-sm-4">
+            <div>
+              <a href="https://bulk.nitext.co.ke" target="_blank" style="text-decoration: none;">
+                <mat-card>
+                  <img src="assets/images/nitext.png" alt="">
+                  <mat-card-content>
+                    <p>Nitext web app</p>
+                  </mat-card-content>
+                </mat-card>
+              </a>
+            </div>
+          </div>
+          <div>
+          </div>
+        </div>
+      </div>
+    </div>
   </section>
   </div>
 <router-outlet />
