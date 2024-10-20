@@ -4,6 +4,7 @@ import { CommonModule } from '@angular/common';
 import { MatIconRegistry } from '@angular/material/icon';
 import { DomSanitizer } from '@angular/platform-browser';
 import { MatIconModule } from '@angular/material/icon';
+import { MatTooltipModule } from '@angular/material/tooltip';
 import { MaterialImports } from './/material.component'
 
 @Component({
@@ -13,6 +14,7 @@ import { MaterialImports } from './/material.component'
     RouterOutlet,
     CommonModule,
     MatIconModule,
+    MatTooltipModule,
     MaterialImports
   ],
   templateUrl: './app.component.html',
@@ -20,6 +22,12 @@ import { MaterialImports } from './/material.component'
 })
 export class AppComponent {
   title = 'ivonne';
+  contacts: {name: string, icon:string} [] = [
+    {name: 'Email', icon: 'gmail'},
+    {name: 'LinkedIn', icon: 'linkedin'},
+    {name: 'Github', icon: 'github'},
+    {name: 'X', icon: 'x'},
+  ]
   languages: { name: string, icon:string } []= [
     {name: 'JavaScript', icon: 'javascript'},
     {name: 'TypeScript', icon: 'typescript'},
@@ -50,6 +58,12 @@ export class AppComponent {
     this.registerIcons();
   }
   registerIcons(): void {
+    this.contacts.map(item => {
+      this.matIconRegistry.addSvgIcon(
+        item.icon,
+        this.domSanitzer.bypassSecurityTrustResourceUrl(`/assets/icons/${item.icon}.svg`)
+      )
+    });
     this.languages.map(item => {
       this.matIconRegistry.addSvgIcon(
         item.icon,
