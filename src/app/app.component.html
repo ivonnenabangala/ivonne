@@ -24,12 +24,12 @@
         </a>
         <a href="https://github.com/ivonnenabangala" target="_blank">
           <mat-icon>
-            <img src="/assets/icons/github.svg" alt="Email" matTooltip="Github">
+            <img src="/assets/icons/github-light.svg" alt="Email" matTooltip="Github">
           </mat-icon>
         </a>
         <a href="https://x.com/I_nabangala" target="_blank">
           <mat-icon>
-            <img src="/assets/icons/x.svg" alt="Email" matTooltip="X">
+            <img src="/assets/icons/x-light.svg" alt="Email" matTooltip="X">
           </mat-icon>
         </a>
       </div>
@@ -53,16 +53,12 @@
         <div class="row">
           <div class="col">
             <a href="https://drive.google.com/uc?export=download&id=1VH_1pFvntlCk-c32GDuiCu3zknaJttiF" target="_blank" download>
-              <button mat-flat-button color="accent"
-              [ngStyle]="{'background-color': '#CE80FF', 'color': 'white'}"
-              >Download CV</button>
+              <button mat-raised-button style="height: 60px; color:#7C07CF;">Download CV</button>
             </a>
             </div>
             <div class="col">
               <a href="https://drive.google.com/uc?export=download&id=1P7xePbkN22-pLJmlsIZNJ1qiMf9aN1y2" target="_blank" download>
-              <button mat-flat-button
-              [ngStyle]="{'background-color': '#CE80FF', 'color': 'white'}"
-              >Download Resume</button>
+              <button mat-raised-button style="height: 60px; color:#7C07CF;">Download Resume</button>
               </a>
             </div>
         </div>
@@ -78,7 +74,7 @@
       @for (item of languages; track item.name) {
         <div class="row">
           <div class="col-lg">
-            <button mat-raised-button style="height: 60px;">
+            <button mat-raised-button style="height: 60px; color:#7C07CF;">
               <img matChipAvatar [src]="'/assets/icons/' + item.icon + '.svg'" alt="icon" style="width: 40px; height:auto;"/>
                 {{item.name}}
             </button>
@@ -94,7 +90,7 @@
       @for (item of tools; track item.name) {
         <div class="row">
           <div class="col-lg">
-            <button mat-raised-button style="height: 60px;">
+            <button mat-raised-button style="height: 60px; color:#7C07CF;">
               <img matChipAvatar [src]="'/assets/icons/' + item.icon + '.svg'" alt="icon" style="width: 40px; height:auto;"/>
                 {{item.name}}
             </button>

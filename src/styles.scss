@@ -3,7 +3,7 @@
 
 $ivonne-theme: mat.define-theme((
   color: (
-    theme-type: light,
+    theme-type: dark,
     primary: mat.$azure-palette,
     tertiary: mat.$blue-palette,
   ),
@@ -20,4 +20,4 @@ $ivonne-theme: mat.define-theme((
 /* @import url("https://fonts.googleapis.com/icon?family=Material+Icons") */
 
 html, body { height: 100%; }
-body { margin: 0; font-family: 'Poppins', sans-serif; }
+body { margin: 0; font-family: 'Poppins', sans-serif; background-color: black !important;}
