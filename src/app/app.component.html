@@ -10,10 +10,9 @@
       <div class="title">
         <h1>Ivonne Nabangala</h1>
         <h2>Software Developer</h2>
-        
       </div>
       <div class="social-links">
-        <a href="ivonnenabangala@gmail.com" target="_blank">
+        <a href="mailto:ivonnenabangala@gmail.com" target="_blank">
           <mat-icon>
             <img src="/assets/icons/gmail.svg" alt="Email" matTooltip="Email">
           </mat-icon>
@@ -40,16 +39,41 @@
 
 <section class="intro">
   <div class="container">
-    <p>Software developer based in Nairobi, Kenya.</p>
-    <p>
-      I'm passionate about building scallable, efficient, reliable and user friendly applications 
-      and in addition to that, I also embrace learning.
-      I have skills in developing applications using the listed programming languages and technologies.</p>
+    <div class="row">
+      <div class="col-sm-8">
+        <p>Software developer based in Nairobi, Kenya.</p>
+        <p>
+          I am a passionate software developer driven by a career objective of developing secure, 
+          efficient, presentable, and user-friendly software using reliable technologies. 
+          I embrace continuous learning, and writing clean and maintainable code.
+          I have skills in developing applications using the listed programming languages and technologies.
+        </p>
+      </div>
+      <div class="col-sm-4">
+        <div class="row">
+          <div class="col">
+            <a href="https://drive.google.com/uc?export=download&id=1VH_1pFvntlCk-c32GDuiCu3zknaJttiF" target="_blank" download>
+              <button mat-flat-button color="accent"
+              [ngStyle]="{'background-color': '#CE80FF', 'color': 'white'}"
+              >Download CV</button>
+            </a>
+            </div>
+            <div class="col">
+              <a href="https://drive.google.com/uc?export=download&id=1P7xePbkN22-pLJmlsIZNJ1qiMf9aN1y2" target="_blank" download>
+              <button mat-flat-button
+              [ngStyle]="{'background-color': '#CE80FF', 'color': 'white'}"
+              >Download Resume</button>
+              </a>
+            </div>
+        </div>
+      </div>
+    </div>
+    
   </div>
 </section>
 <div class="container body">
 <section>
-    <h1>Languages, Frameworks & Databases</h1>
+    <h1>Languages & Frameworks</h1>
     <div class="pill-group">
       @for (item of languages; track item.name) {
         <div class="row">
