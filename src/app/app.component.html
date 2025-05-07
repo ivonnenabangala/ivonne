@@ -42,8 +42,8 @@
     <div class="row">
       <div class="col-sm-8">
         <p>
-          I am a passionate software developer driven by a career objective of developing secure, 
-          efficient, presentable, and user-friendly software using reliable technologies. 
+          I am a passionate software developer driven by a career objective of developing secure,
+          efficient, presentable, and user-friendly software using reliable technologies.
           I embrace continuous learning, and writing clean and maintainable code.
           I have skills in developing applications using the listed programming languages and technologies.
         </p>
@@ -51,99 +51,108 @@
       <div class="col-sm-4">
         <div class="row">
           <div class="col">
-            <a href="https://drive.google.com/uc?export=download&id=1VH_1pFvntlCk-c32GDuiCu3zknaJttiF" target="_blank" download>
+            <a href="https://drive.google.com/uc?export=download&id=1VH_1pFvntlCk-c32GDuiCu3zknaJttiF" target="_blank"
+              download>
               <button mat-raised-button style="height: 60px;">Download CV</button>
             </a>
-            </div>
-            <div class="col">
-              <a href="https://drive.google.com/uc?export=download&id=1P7xePbkN22-pLJmlsIZNJ1qiMf9aN1y2" target="_blank" download>
+          </div>
+          <div class="col">
+            <a href="https://drive.google.com/uc?export=download&id=1P7xePbkN22-pLJmlsIZNJ1qiMf9aN1y2" target="_blank"
+              download>
               <button mat-raised-button style="height: 60px;">Download Resume</button>
-              </a>
-            </div>
+            </a>
+          </div>
         </div>
       </div>
     </div>
-    
+
   </div>
 </section>
 <div class="container body">
-<section>
-    <h1>Languages & Frameworks</h1>
-    <div class="pill-group">
-      @for (item of languages; track item.name) {
-        <div class="row">
-          <div class="col-lg">
-            <button mat-raised-button style="height: 60px;">
-              <img matChipAvatar [src]="'/assets/icons/' + item.icon + '.svg'" alt="icon" style="width: 40px; height:auto;"/>
-                {{item.name}}
-            </button>
+  <mat-tab-group class="tabs">
+    <mat-tab label="Languages & Frameworks">
+        <h1>Languages & Frameworks</h1>
+        <div class="pill-group">
+          @for (item of languages; track item.name) {
+          <div class="row mb-2">
+            <div class="col-lg">
+              <button mat-raised-button style="height: 60px;">
+                <img
+                  matChipAvatar
+                  [src]="'/assets/icons/' + item.icon + '.svg'"
+                  alt="icon"
+                  style="width: 40px; height: auto;"
+                />
+                {{ item.name }}
+              </button>
+            </div>
           </div>
+          }
         </div>
-      }
-    </div>
+    </mat-tab>
   
-  </section>
-  <section>
-    <h1>Tools & Technologies</h1>
-    <div class="pill-group">
-      @for (item of tools; track item.name) {
-        <div class="row">
-          <div class="col-lg">
-            <button mat-raised-button style="height: 60px;">
-              <img matChipAvatar [src]="'/assets/icons/' + item.icon + '.svg'" alt="icon" style="width: 40px; height:auto;"/>
-                {{item.name}}
-            </button>
+    <mat-tab label="Databases">
+        <h1>Databases</h1>
+        <div class="pill-group">
+          @for (item of databases; track item.name) {
+          <div class="row mb-2">
+            <div class="col-lg">
+              <button mat-raised-button style="height: 60px;">
+                <img
+                  matChipAvatar
+                  [src]="'/assets/icons/' + item.icon + '.svg'"
+                  alt="icon"
+                  style="width: 40px; height: auto;"
+                />
+                {{ item.name }}
+              </button>
+            </div>
           </div>
+          }
         </div>
-      }
-    </div>
-  </section>
-  <section>
-    <div class="projects-wrapper">
-      <h1 style="text-align: center;">Projects</h1>
-      <div class="container" style="text-align: center;">
-        <div class="row">
-          <div class="col-sm-4">
-            <div>
-              <a href="https://viutravel.com" target="_blank" style="text-decoration: none;">
-                <mat-card>
-                  <img src="assets/images/viutravel.png" alt="">
-                  <mat-card-content>
-                    <p>Viutravel web app</p>
-                  </mat-card-content>
-                </mat-card>
-              </a>
+    </mat-tab>
+  
+    <!-- Tab 3: Tools & Technologies -->
+    <mat-tab label="Tools & Technologies">
+        <h1>Tools & Technologies</h1>
+        <div class="pill-group">
+          @for (item of tools; track item.name) {
+          <div class="row mb-2">
+            <div class="col-lg">
+              <button mat-raised-button style="height: 60px;">
+                <img
+                  matChipAvatar
+                  [src]="'/assets/icons/' + item.icon + '.svg'"
+                  alt="icon"
+                  style="width: 40px; height: auto;"
+                />
+                {{ item.name }}
+              </button>
             </div>
           </div>
-          <div class="col-sm-4">
-            <div>
-              <a href="https://stmonicasgirls.com" target="_blank" style="text-decoration: none;">
-                <mat-card>
-                  <img src="assets/images/smghs.png" alt="">
-                  <mat-card-content>
-                    <p>School website</p>
-                  </mat-card-content>
-                </mat-card>
-              </a>
-            </div>
-          </div>
-          <div class="col-sm-4">
-            <div>
-              <a href="https://bulk.nitext.co.ke" target="_blank" style="text-decoration: none;">
-                <mat-card>
-                  <img src="assets/images/nitext.png" alt="">
-                  <mat-card-content>
-                    <p>Nitext web app</p>
-                  </mat-card-content>
-                </mat-card>
-              </a>
-            </div>
-          </div>
-          <div>
-          </div>
+          }
         </div>
+    </mat-tab>
+  </mat-tab-group>
+
+  <section>
+    <h1 class="text-center mb-4">Projects</h1>
+    <div class="row">
+      <div class="col-lg-4 col-md-6 col-sm-12 mb-4" *ngFor="let project of projects">
+        <mat-card class="card h-100" (click)="openBottomSheet(project)" style="cursor: pointer;">
+          <img [src]="project.image" class="card-img-top" alt="" />
+          <mat-card-content class="card-body">
+            <p class="card-text">{{ project.title }}</p>
+          </mat-card-content>
+          <hr />
+          <div class="tech-stack px-3 pb-3" style="height: 40px;">
+            <img *ngFor="let tech of project.techStack" [src]="'assets/icons/' + tech + '.svg'" [alt]="tech"
+              class="me-2"  />
+          </div>
+        </mat-card>
       </div>
     </div>
   </section>
-  </div>
+
+</div>
 <router-outlet />
